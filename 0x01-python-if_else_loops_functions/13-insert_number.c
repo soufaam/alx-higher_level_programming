@@ -36,7 +36,7 @@ listint_t *insert_node(listint_t **head, int number)
 			tmpnode->next = node;
 			return(tmpnode);
 		}
-		else
+		else if (ntmp->next == NULL)
 		{
 			ntmp->next = node;
 			node->next = NULL;
