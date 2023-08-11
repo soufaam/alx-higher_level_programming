@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-cal = __import__('calculator_1')
 if __name__ == "__main__":
+    cal = __import__('calculator_1')
     a = 10
     b = 5
     print("{} + {} = {}".format(a, b, cal.add(a, b)))
