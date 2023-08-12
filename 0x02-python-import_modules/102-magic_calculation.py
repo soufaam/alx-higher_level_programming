@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-__import
+
 def magic_calculation(a, b):
+    0
+    d = (0, 'add', 'sub')
     if (a < b):
         c = add(a, b)
     
