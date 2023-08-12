@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3.8
+#!/usr/bin/python
 import hidden_4 as hi
 
 if __name__ == "__main__":
