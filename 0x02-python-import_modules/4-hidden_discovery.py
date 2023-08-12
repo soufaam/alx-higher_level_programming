@@ -1,7 +1,8 @@
-#!/usr/bin/python3
-#!/usr/bin/python3
-import sys
-import marshal
-with open("hidden_4.pyc", "rb") as f:
-    code = marshal.load(f)
-    print(code)
+#!/usr/local/bin/python3.8
+import hidden_4 as hi
+
+if __name__ == "__main__":
+    plt = dir(hi)
+    for item in plt:
+        if not item.startswith("_"):
+            print(item)
