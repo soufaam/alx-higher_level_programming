@@ -10,6 +10,3 @@ def no_c(my_string):
     for item in copy_list:
         copy_string += item
     return copy_string
-print(no_c("Best School"))
-print(no_c("Chicago"))
-print(no_c("C is fun!"))
