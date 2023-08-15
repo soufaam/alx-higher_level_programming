@@ -8,4 +8,5 @@ def delete_at(my_list=[], idx=0):
             continue
         else:
             nwlist.append(my_list[i])
-    return nwlist
+    my_list = nwlist
+    return my_list
