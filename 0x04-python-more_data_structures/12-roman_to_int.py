@@ -10,4 +10,7 @@ def roman_to_int(roman_string):
         if roman_string[idx] == "V" or roman_string[idx] == "X":
             if idx > 0 and roman_string[idx - 1] == "I":
                 sum -= 2
+        if roman_string[idx] == "C":
+            if idx > 0 and roman_string[idx - 1] == "X":
+                sum -= 20
     return sum
