@@ -37,7 +37,6 @@ listint_t *reverse_listint(listint_t *head)
 		add_nodeint(&h, tmp->n);
 		tmp = tmp->next;
 	}
-	printf("here");
 	return (h);
 }
 
