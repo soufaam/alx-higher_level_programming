@@ -51,6 +51,8 @@ int is_palindrome(listint_t **head)
 	listint_t *tmp = *head;
 	int check = 0;
 
+	if (!*head)
+		return (1);
 	reversed = reverse_listint(tmp);
 	while (tmp && reversed)
 	{
