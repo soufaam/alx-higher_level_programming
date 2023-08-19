@@ -9,7 +9,7 @@
 void print_python_list_info(PyObject *p)
 {
 	PyObject *item, *iter;
-	size_t i = 0, ca = 0;
+	size_t i = 0, j = 0, ca = 0;
 
 	iter = PyObject_GetIter(p);
 	item = PyIter_Next(iter);
@@ -17,7 +17,10 @@ void print_python_list_info(PyObject *p)
 	while (item)
 	{
 	    if (PyLong_Check(item))
+		{	
 			ca = 1;
+			j++;
+		}
 		else
 		{
 			ca = 0;
@@ -25,7 +28,7 @@ void print_python_list_info(PyObject *p)
 		}
 		item = PyIter_Next(iter);
 	}
-	if (ca)
+	if (ca && j > 4)
 		printf("[*] Allocated = 8\n");
 	else
 		printf("[*] Allocated = %lu\n", Py_SIZE(p));
