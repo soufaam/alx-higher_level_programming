@@ -30,4 +30,6 @@ void print_python_list_info(PyObject *p)
 		item = PyIter_Next(iter);
 		i++;
 	}
+	Py_DECREF(item);
+	Py_DECREF(iter); 
 }
