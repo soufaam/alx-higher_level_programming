@@ -55,7 +55,7 @@ void print_python_list(PyObject *p)
         if (ca && j >= 4)
                 printf("[*] Allocated = 8\n");
         else
-                printf("[*] Allocated = %lu\n", Py_SIZE(p));
+                printf("[*] Allocated = %lu\n", PyList_GET_SIZE(p));
 
         iter = PyObject_GetIter(p);
         if (iter)
