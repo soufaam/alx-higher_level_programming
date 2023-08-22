@@ -46,7 +46,6 @@ void print_python_list_info(PyObject *p)
 			printf("Element %lu: float\n", i);
 		else if (PyUnicode_Check(item))
 			printf("Element %lu: str\n", i);
-		else if (PyBytes_Check)
 		item = PyIter_Next(iter);
 		i++;
 	}

@@ -34,7 +34,7 @@ void print_python_list(PyObject *p)
         PyObject *item, *iter;
         size_t i = 0, j, ca = 0;
         printf("[*] Python list info\n");
-        printf("[*] Size of the Python List = %lu\n", Py_SIZE(p));
+        printf("[*] Size of the Python List = %lu\n", PyList_GET_SIZE(p));
         iter = PyObject_GetIter(p);
         if (iter)
                 item = PyIter_Next(iter);
