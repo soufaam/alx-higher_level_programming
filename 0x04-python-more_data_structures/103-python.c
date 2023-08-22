@@ -24,7 +24,10 @@ void print_python_bytes(PyObject *p)
         for (Py_ssize_t i = 0; i < first; i++)
         {
                 unsigned char byte = PyBytes_AsString(p)[i];
-                printf("%02x ", byte);
+                if (i == first - 1)
+                         printf("%02x", byte);
+                else
+                        printf("%02x ", byte);
         }
         printf("\n");
 }   
