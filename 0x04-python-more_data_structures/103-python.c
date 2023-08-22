@@ -13,14 +13,14 @@ void print_python_bytes(PyObject *p)
                 return ;
         }
         size = PyBytes_Size(p);
-        printf("size: %lu\n", size);
-        printf("trying string: %s\n", PyBytes_AsString(p));
+        printf("  size: %lu\n", size);
+        printf("  trying string: %s\n", PyBytes_AsString(p));
 
         if (size > 9)
                 first = 10;
         else
                 first = size + 1;
-        printf("first %lu bytes: ", first);
+        printf("  first %lu bytes: ", first);
         for (Py_ssize_t i = 0; i < first; i++)
         {
                 unsigned char byte = PyBytes_AsString(p)[i];
