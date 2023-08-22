@@ -28,7 +28,7 @@ void print_python_list_info(PyObject *p)
 		}
 		item = PyIter_Next(iter);
 	}
-	if (ca && j > 4)
+	if (ca && j >= 4)
 		printf("[*] Allocated = 8\n");
 	else
 		printf("[*] Allocated = %lu\n", Py_SIZE(p));
@@ -46,6 +46,7 @@ void print_python_list_info(PyObject *p)
 			printf("Element %lu: float\n", i);
 		else if (PyUnicode_Check(item))
 			printf("Element %lu: str\n", i);
+		else if (PyBytes_Check)
 		item = PyIter_Next(iter);
 		i++;
 	}
