@@ -33,5 +33,5 @@ class Square:
         Returns:
             returns the square of size
         """
-        return self.__size ^ 2
+        return self.__size ** 2
     pass
