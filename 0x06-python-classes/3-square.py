@@ -31,6 +31,7 @@ class Square:
         Note:
             Do not include the `self` parameter in the ``Args`` section.
         Returns:
-            True if successful, False otherwise.
+            returns the square of size
         """
+        return self.__size ^ 2
     pass
