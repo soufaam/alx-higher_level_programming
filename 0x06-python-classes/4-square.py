@@ -34,3 +34,21 @@ class Square:
             returns the square of size
         """
         return self.__size ** 2
+
+    @property
+    def size(self):
+        """size() method: this is getter method, we can just read only."""
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """size setter method: this method set the __size to value
+        Args:
+            value (int): set the _size to value.
+        If the setter method contains notable behavior, it should be
+        mentioned here.
+        """
+        if "int" not in str(type(value)):
+            raise TypeError("size must be an integer")
+        self.__size = value
+    pass
