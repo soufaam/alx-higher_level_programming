@@ -10,7 +10,7 @@ def safe_print_integer_err(value):
  'd' for object of type 'str'\n")
         return False
     except TypeError as err:
-        sys.stderr.write("unsupported format string passed \
+        sys.stderr.write("Exception: Unsupported format string passed \
 to NoneType.__format__'\n")
         return False
     return True
