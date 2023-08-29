@@ -26,5 +26,11 @@ class Square:
         self.__size = size
     """  Attributes:
         __size:   The size of a square is crucial for a square   """
-    
+    def area(self):
+        """Class methods are similar to regular functions.
+        Note:
+            Do not include the `self` parameter in the ``Args`` section.
+        Returns:
+            True if successful, False otherwise.
+        """
     pass
