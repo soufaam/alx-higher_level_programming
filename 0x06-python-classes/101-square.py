@@ -31,9 +31,18 @@ class Square:
                 "int" not in str(type(position[1])):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
+        if self.__size == 0:
+            print()
+        for element in range(self.__size):
+            x = self.__position[0]
+            for pos in range(x):
+                print(" ", end='')
+            for item in range(self.__size):
+                print("#", end='')
+            print()
     """  Attributes:
-        __size:   The size of a square is crucial for a square   
-        __postion: the position when we start printing"""
+        __size:   The size of a square is crucial for a square
+        __postion: the postion when start printing spaces it's a tuple"""
     def area(self):
         """Class methods are similar to regular functions.
         Note:
@@ -96,8 +105,6 @@ class Square:
         for element in range(self.__size):
             x = self.__position[0]
             for pos in range(x):
-                if self.__position[1] > 0:
-                    break
                 print(" ", end='')
             for item in range(self.__size):
                 print("#", end='')
