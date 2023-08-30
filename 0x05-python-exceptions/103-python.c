@@ -30,7 +30,7 @@ void print_python_bytes(PyObject *p)
 	}
 	size = PyBytes_Size(p);
 	printf("  size: %lu\n", size);
-	printf("  trying string: %s\n", PyBytes_AsString(p));	
+	printf("  trying string: %s\n", PyUnicode_AS_DATA(p));	
 	if (size > 9)
 	        first = 10;
 	else
@@ -38,7 +38,7 @@ void print_python_bytes(PyObject *p)
 	printf("  first %lu bytes: ", first);
 	for (Py_ssize_t i = 0; i < first; i++)
 	{
-	        unsigned char byte = PyBytes_AsString(p)[i];
+	        unsigned char byte = PyUnicode_AS_DATA(p)[i];
 	        if (i == first - 1)
 	                 printf("%02x", byte);
 	        else
