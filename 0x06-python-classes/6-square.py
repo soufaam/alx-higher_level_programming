@@ -101,8 +101,6 @@ class Square:
         for element in range(self.__size):
             x = self.__position[0]
             for pos in range(x):
-                if self.__position[1] > 0:
-                    break
                 print(" ", end='')
             for item in range(self.__size):
                 print("#", end='')
