@@ -25,7 +25,6 @@ class Square:
         if (size < 0):
             raise ValueError("size must be >= 0")
         self.__size = size
-        print(len(position))
         if "tuple" not in str(type(position)):
             raise TypeError("position must be a tuple of 2 positive integers")
         if len(position) != 2:
