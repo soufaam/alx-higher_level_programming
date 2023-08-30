@@ -105,9 +105,11 @@ class Square:
             for item in range(self.__size):
                 print("#", end='')
             print()
+
     def __str__(self) -> str:
         """instance method __str__: this  instance method that prints
-        the square based on __size it's like my_print() method it returns a string
+        the square based on __size it's like my_print()
+        method it returns a string
         no args are given we could access to the _ssize using self
         If the setter method contains notable behavior, it should be
         mentioned here.
@@ -118,8 +120,8 @@ class Square:
         x = self.__position[0]
         for element in range(self.__size):
             for pos in range(x):
-                    string += ' '
+                string += ' '
             for item in range(self.__size):
-                    string += '#'
+                string += '#'
             string += '\n'
         return string
