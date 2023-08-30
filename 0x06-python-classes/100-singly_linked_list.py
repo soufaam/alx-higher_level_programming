@@ -109,10 +109,13 @@ class SinglyLinkedList:
         =>print the entire list in stdout
         =>one node number by line"""
         tmpnode = self.__head
+        flag = False
         while tmpnode is not None:
             if not tmpnode.next_node:
+                flag = True
                 break
             print(f"{tmpnode.data}")
             tmpnode = tmpnode.next_node
-        print(f"{tmpnode.data}", end='')
+        if flag:
+            print(f"{tmpnode.data}", end='')
         return ''
