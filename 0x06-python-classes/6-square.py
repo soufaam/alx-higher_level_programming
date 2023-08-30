@@ -105,7 +105,3 @@ class Square:
             for item in range(self.__size):
                 print("#", end='')
             print()
-try:
-    my_square = Square(3, (1, "3"))
-except Exception as e:
-    print(e)
