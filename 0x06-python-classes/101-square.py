@@ -115,9 +115,10 @@ class Square:
         mentioned here.
         """
         string = ""
-        if self.__size == 0 or self.__position[1] > 0:
+        if self.__size == 0:
+            return string
+        if self.__position[1] > 0:
             string += '\n'
-            return ""
         x = self.__position[0]
         for element in range(self.__size):
             for pos in range(x):
