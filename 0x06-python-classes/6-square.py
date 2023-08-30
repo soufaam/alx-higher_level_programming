@@ -107,10 +107,3 @@ class Square:
             print()
 
     pass
-
-
-
-try:
-    my_square = Square(3, (1, ))
-except Exception as e:
-    print(e)
