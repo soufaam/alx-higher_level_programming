@@ -25,15 +25,19 @@ class Square:
         if (size < 0):
             raise ValueError("size must be >= 0")
         self.__size = size
-        if "tuple" not in str(type(position)):
+        if not isinstance(position, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if "int" not in str(type(position[0])) or\
-                "int" not in str(type(position[1])):
+        if len(position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(position[0], int) or not\
+                isinstance(position[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
     """  Attributes:
         __size:   The size of a square is crucial for a square
-        __postion: the postion when start printing spaces it's a tuple"""
+        __postion: the position when we start printing"""
     def area(self):
         """Class methods are similar to regular functions.
         Note:
@@ -43,14 +47,6 @@ class Square:
         """
         return self.__size ** 2
 
-    def __repr__(self) -> None:
-        """Class methods are similar to regular functions.
-        Note:
-            Do not include the `self` parameter in the ``Args`` section.
-        Returns:
-            returns the square of size
-        """
-        return self.my_print()
     @property
     def size(self):
         """size() method: this is getter method, we can just read only."""
@@ -84,11 +80,12 @@ class Square:
         If the setter method contains notable behavior, it should be
         mentioned here.
         """
-        if "tuple" not in str(type(value)):
+        if not isinstance(value, tuple):
             raise TypeError("position must be a tuple\
             of 2 positive integers")
-        if "int" not in str(type(value[0])) or \
-                "int" not in str(type(value[1])):
+        if len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value[0], int) or not isinstance(value[1], int):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -99,21 +96,30 @@ class Square:
         If the setter method contains notable behavior, it should be
         mentioned here.
         """
-        if self.__size == 0:
+        if self.__size == 0 or self.__position[1] > 0:
             print()
+        x = self.__position[0]
         for element in range(self.__size):
-            x = self.__position[0]
             for pos in range(x):
                 print(" ", end='')
             for item in range(self.__size):
                 print("#", end='')
             print()
-
-    pass
-my_square = Square(5, (0, 0))
-print(my_square)
-
-print("--")
-
-my_square = Square(5, (4, 1))
-print(my_square.my_print())
+    def __str__(self) -> str:
+        """instance method __str__: this  instance method that prints
+        the square based on __size it's like my_print() method it returns a string
+        no args are given we could access to the _ssize using self
+        If the setter method contains notable behavior, it should be
+        mentioned here.
+        """
+        string = ""
+        if self.__size == 0 or self.__position[1] > 0:
+            string.join('\n')
+        x = self.__position[0]
+        for element in range(self.__size):
+            for pos in range(x):
+                    string += ' '
+            for item in range(self.__size):
+                    string += '#'
+            string += '\n'
+        return string
