@@ -98,8 +98,8 @@ class Square:
         """
         if self.__size == 0:
             print()
+        x = self.__position[1]
         for element in range(self.__size):
-            x = self.__position[0]
             for pos in range(x):
                 print(" ", end='')
             for item in range(self.__size):
