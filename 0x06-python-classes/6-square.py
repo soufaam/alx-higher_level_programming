@@ -96,7 +96,7 @@ class Square:
         If the setter method contains notable behavior, it should be
         mentioned here.
         """
-        if self.__size == 0:
+        if self.__size == 0 or self.__position[1] > 0:
             print()
         x = self.__position[0]
         for element in range(self.__size):
@@ -104,4 +104,6 @@ class Square:
                 print(" ", end='')
             for item in range(self.__size):
                 print("#", end='')
+            for pos in range(x):
+                print(" ", end='')
             print()
