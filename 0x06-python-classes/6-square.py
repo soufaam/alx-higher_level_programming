@@ -32,7 +32,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
     """  Attributes:
-        __size:   The size of a square is crucial for a square   
+        __size:   The size of a square is crucial for a square
         __postion: the position when we start printing"""
     def area(self):
         """Class methods are similar to regular functions.
@@ -68,7 +68,7 @@ class Square:
         """
         return self.__position
 
-    @size.setter
+    @position.setter
     def position(self, value):
         """position setter method: this method set the __postion to value
         Args:

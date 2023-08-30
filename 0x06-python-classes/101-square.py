@@ -31,15 +31,6 @@ class Square:
                 "int" not in str(type(position[1])):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
-        if self.__size == 0:
-            print()
-        for element in range(self.__size):
-            x = self.__position[0]
-            for pos in range(x):
-                print(" ", end='')
-            for item in range(self.__size):
-                print("#", end='')
-            print()
     """  Attributes:
         __size:   The size of a square is crucial for a square
         __postion: the postion when start printing spaces it's a tuple"""
@@ -52,6 +43,14 @@ class Square:
         """
         return self.__size ** 2
 
+    def __repr__(self) -> None:
+        """Class methods are similar to regular functions.
+        Note:
+            Do not include the `self` parameter in the ``Args`` section.
+        Returns:
+            returns the square of size
+        """
+        return self.my_print()
     @property
     def size(self):
         """size() method: this is getter method, we can just read only."""
@@ -77,7 +76,7 @@ class Square:
         """
         return self.__position
 
-    @size.setter
+    @position.setter
     def position(self, value):
         """position setter method: this method set the __postion to value
         Args:
@@ -111,3 +110,10 @@ class Square:
             print()
 
     pass
+my_square = Square(5, (0, 0))
+print(my_square)
+
+print("--")
+
+my_square = Square(5, (4, 1))
+print(my_square.my_print())
