@@ -25,15 +25,15 @@ class Square:
         if (size < 0):
             raise ValueError("size must be >= 0")
         self.__size = size
-        if "tuple" not in str(type(position)):
+        if not isinstance(position, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
         if len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         if not isinstance(position[0], int) and not\
-            isinstance(position[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
+                isinstance(position[1], int):
+            raise TypeError("position must be a tuple of2 positive integers")
         if position[0] < 0 or position[1] < 0:
-                raise TypeError("position must be a tuple of 2 positive integers") 
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
     """  Attributes:
         __size:   The size of a square is crucial for a square
@@ -80,7 +80,7 @@ class Square:
         If the setter method contains notable behavior, it should be
         mentioned here.
         """
-        if "tuple" not in str(type(value)):
+        if not isinstance(value, tuple):
             raise TypeError("position must be a tuple\
             of 2 positive integers")
         if len(value) != 2:
