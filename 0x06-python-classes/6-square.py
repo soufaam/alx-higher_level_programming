@@ -105,5 +105,3 @@ class Square:
             for item in range(self.__size):
                 print("#", end='')
             print()
-
-    pass
