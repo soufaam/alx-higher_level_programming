@@ -104,6 +104,4 @@ class Square:
                 print(" ", end='')
             for item in range(self.__size):
                 print("#", end='')
-            for pos in range(x):
-                print(" ", end='')
             print()
