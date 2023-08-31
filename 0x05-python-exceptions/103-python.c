@@ -5,15 +5,12 @@ void print_python_float(PyObject *p);
 void print_python_bytes(PyObject *p);
 void print_python_float(PyObject *p)
 {
-        Py_ssize_t size, first;
-
         printf("[.] float object info\n");
         if (!PyFloat_Check(p))
         {
                 printf("  [ERROR] Invalid Float Object\n");
                 return ;
         }
-        size = PyBytes_Size(p);
         printf(" value: %f\n", PyFloat_AsDouble(p));
 }
 
@@ -21,16 +18,22 @@ void print_python_float(PyObject *p)
 
 void print_python_bytes(PyObject *p)
 {
-	Py_ssize_t size, first;	
+	Py_ssize_t size, first;
+	PyObject* utf8_string;
+	const char* c_string = NULL;
+
 	printf("[.] bytes object info\n");
 	if (!PyBytes_Check(p))
 	{
 	        printf("  [ERROR] Invalid Bytes Object\n");
 	        return ;
 	}
+	utf8_string = PyObject_Str(p);
+    if (utf8_string)
+		c_string = PyUnicode_AsUTF8(utf8_string);
 	size = PyBytes_Size(p);
 	printf("  size: %lu\n", size);
-	printf("  trying string: %s\n", PyUnicode_AS_DATA(p));	
+	printf("  trying string: %s\n", c_string);	
 	if (size > 9)
 	        first = 10;
 	else
