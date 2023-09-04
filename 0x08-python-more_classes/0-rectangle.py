@@ -9,7 +9,8 @@ with a section header and a colon followed by a block of indented text.
 
 
 class Rectangle:
-    """This is a class Rectangle summary, it's a empty class that defines a Rectangle
+    """This is a class Rectangle summary, it's a empty
+    class that defines a Rectangle
     there is no attributes yet
     """
     pass
