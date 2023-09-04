@@ -72,3 +72,24 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
+    
+    def area(self):
+        """Class methods are similar to regular functions.
+        Note:
+            Do not include the `self` parameter in the ``Args`` section.
+        Returns:
+            returns the square of size
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """Class methods are similar to regular functions.
+        Note:
+            Do not include the `self` parameter in the ``Args`` section.
+        Returns:
+            returns the square of size
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return (self.__width + self.__height) * 2
