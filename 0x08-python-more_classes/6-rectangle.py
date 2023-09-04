@@ -12,6 +12,7 @@ class Rectangle:
     """This is a class Square summary, it's a empty class that defines a square
     there is no attributes yet
     """
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
         """
          The __init__ method may be documented in either the class level
@@ -29,6 +30,7 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
         self.__height = height
+        Rectangle.number_of_instances += 1
     """  Attributes:
         __width: width must be an integer,
         __height: height must be an integer"""
@@ -127,4 +129,5 @@ class Rectangle:
     def __del__(self):
         """instance method __del__: this  instance method that prints
         the square based on __height and __width it's like my_print()"""
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
