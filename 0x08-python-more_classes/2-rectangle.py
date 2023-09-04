@@ -73,7 +73,6 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    
     def area(self):
         """Class methods are similar to regular functions.
         Note:
