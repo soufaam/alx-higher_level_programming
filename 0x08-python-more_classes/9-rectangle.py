@@ -150,3 +150,18 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """instance method __repr__: this  instance method that prints
+        the square based on __height and __width it's like my_print()
+        method it returns a string
+        no args are given we could access to the _ssize using self
+        If the setter method contains notable behavior, it should be
+        mentioned here.
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        return cls(size, size)
