@@ -13,6 +13,7 @@ class Rectangle:
     there is no attributes yet
     """
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """
@@ -109,7 +110,7 @@ class Rectangle:
             return string
         for element in range(self.__height):
             for item in range(self.__width):
-                string += '#'
+                string += Rectangle.print_symbol
             if element == self.__height - 1:
                 break
             string += '\n'
