@@ -19,7 +19,7 @@ def matrix_divided(matrix, div):
     matrix:  must be a list of lists of integers or floats
     div: iv must be a number (integer or float),
     matrix must be a matrix (list of lists)\
-                            of integers/floats
+    of integers/floats
     a and b must be first casted to integers if they are float
     Returns an integer: the addition of a and b"""
 
@@ -28,7 +28,7 @@ def matrix_divided(matrix, div):
     i = 0
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) of\
-integers/floats")
+ integers/floats")
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if not isinstance(div, int) and not isinstance(div, float):
@@ -37,17 +37,17 @@ integers/floats")
         if isinstance(row, list):
             if i >= 1 and len(row) != size:
                 raise TypeError("Each row of the matrix must\
-have the same size")
+ have the same size")
             size = len(row)
             newrow = []
             for item in row:
                 if not isinstance(item, int) and not isinstance(item, float):
                     raise TypeError("matrix must be a matrix (list of lists)\
-of integers/floats")
+ of integers/floats")
                 newrow.append(round(item / div, 2))
         else:
             raise TypeError("matrix must be a matrix\
-(list of lists) of integers/floats")
+ (list of lists) of integers/floats")
         i += 1
         new_matrix.append(newrow)
     return new_matrix

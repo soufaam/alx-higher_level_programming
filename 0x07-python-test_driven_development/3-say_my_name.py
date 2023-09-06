@@ -2,10 +2,13 @@
 
 """ This is a decription of this module .
 
-This module contains a function called say_my_name that checks for th valid given
+This module contains a function called say_my_name
+that checks for th valid given
 datatypes and returns a sum of tow integer
-style Guide`_. Docstrings may extend over multiple lines. Sections are created
-with a section header and a colon followed by a block of indented text.
+style Guide`_. Docstrings may extend over
+multiple lines. Sections are created
+with a section header and a colon followed
+by a block of indented text.
 """
 
 
