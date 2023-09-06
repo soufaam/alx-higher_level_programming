@@ -160,8 +160,4 @@ class Rectangle:
         If the setter method contains notable behavior, it should be
         mentioned here.
         """
-        if not isinstance(size, int):
-            raise TypeError("width must be an integer")
-        if size < 0:
-            raise ValueError("width must be >= 0")
         return cls(size, size)
