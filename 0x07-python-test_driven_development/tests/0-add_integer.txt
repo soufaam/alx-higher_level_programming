@@ -31,7 +31,11 @@ TypeError: b must be an integer
 Traceback (most recent call last):
         ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
->>> add_integer(1.3407807929942597e+154**2, 12)
+>>> add_integer(1.3407807929942597e+154**2 , 12)
+Traceback (most recent call last):
+        ...
+OverflowError: (34, 'Numerical result out of range')
+>>> add_integer( 12 , 1.3407807929942597e+154**2)
 Traceback (most recent call last):
         ...
 OverflowError: (34, 'Numerical result out of range')

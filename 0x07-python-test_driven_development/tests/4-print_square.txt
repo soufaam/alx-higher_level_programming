@@ -1,0 +1,31 @@
+The ``say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+This is an say_my_name.txt text file in reStructuredText format.  First import
+``print_square`` from the ``print_square`` module:
+>>> print_square = __import__('4-print_square').print_square
+
+>>> print_square(4)
+####
+####
+####
+####
+>>> print_square(-0.5)
+Traceback (most recent call last):
+        ...
+TypeError: size must be an integer
+>>> print_square(-34)
+Traceback (most recent call last):
+        ...
+ValueError: size must be >= 0
+>>> print_square("noe")
+Traceback (most recent call last):
+        ...
+TypeError: size must be an integer
+>>> print_square()
+Traceback (most recent call last):
+        ...
+TypeError: print_square() missing 1 required positional argument: 'size'
