@@ -74,3 +74,13 @@ class TestMaxInteger(unittest.TestCase):
         """
         got = max_integer([34, -2, 70, 4])
         self.assertEqual(got, 70)
+
+    def test_max_one_element(self):
+        """Class methods are similar to regular functions.
+        Note:
+            Do not include the `self` parameter in the ``Args`` section.
+        Returns:
+            returns 
+        """
+        got = max_integer([34])
+        self.assertEqual(got, 34)
