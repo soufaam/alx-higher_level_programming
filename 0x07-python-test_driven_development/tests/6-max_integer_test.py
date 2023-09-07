@@ -14,7 +14,7 @@ by a block of indented text.
 """
 
 class TestMaxInteger(unittest.TestCase):
-    def test_max_integer_normal(self):
+    def test_max_integer_end(self):
         """Class methods are similar to regular functions.
         Note:
             Do not include the `self` parameter in the ``Args`` section.
@@ -45,7 +45,7 @@ class TestMaxInteger(unittest.TestCase):
         got = max_integer([-1, -2, -5, -4])
         self.assertEqual(got, -1)
 
-    def test_max_negative(self):
+    def test_max_bigining(self):
         """Class methods are similar to regular functions.
         Note:
             Do not include the `self` parameter in the ``Args`` section.
@@ -55,7 +55,7 @@ class TestMaxInteger(unittest.TestCase):
         got = max_integer([45, 2, 23, 4])
         self.assertEqual(got, 45)
 
-    def test_max_negative(self):
+    def test_max_midle(self):
         """Class methods are similar to regular functions.
         Note:
             Do not include the `self` parameter in the ``Args`` section.
@@ -63,4 +63,14 @@ class TestMaxInteger(unittest.TestCase):
             returns 
         """
         got = max_integer([34, 2, 70, 4])
+        self.assertEqual(got, 70)
+
+    def test_max_mix(self):
+        """Class methods are similar to regular functions.
+        Note:
+            Do not include the `self` parameter in the ``Args`` section.
+        Returns:
+            returns 
+        """
+        got = max_integer([34, -2, 70, 4])
         self.assertEqual(got, 70)
