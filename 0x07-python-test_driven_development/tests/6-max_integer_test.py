@@ -45,12 +45,22 @@ class TestMaxInteger(unittest.TestCase):
         got = max_integer([-1, -2, -5, -4])
         self.assertEqual(got, -1)
 
-        def test_max_negative(self):
-            """Class methods are similar to regular functions.
+    def test_max_negative(self):
+        """Class methods are similar to regular functions.
         Note:
             Do not include the `self` parameter in the ``Args`` section.
         Returns:
-            returns
-            """
-        got = max_integer([-1, "3", -5, -4])
-        self.assertEqual(got, -1)
+            returns 
+        """
+        got = max_integer([45, 2, 23, 4])
+        self.assertEqual(got, 45)
+
+    def test_max_negative(self):
+        """Class methods are similar to regular functions.
+        Note:
+            Do not include the `self` parameter in the ``Args`` section.
+        Returns:
+            returns 
+        """
+        got = max_integer([34, 2, 70, 4])
+        self.assertEqual(got, 70)
