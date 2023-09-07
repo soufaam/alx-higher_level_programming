@@ -19,10 +19,15 @@ def text_indentation(text):
     text: must be strings
     A function that prints My name is <first name> <last name>"""
 
+    flag = False
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     for letter in text:
         if letter == '.' or letter == '?' or letter == ':':
             print(f"{letter}\n")
+            flag = True
+            continue
+        if flag and letter == ' ':
             continue
         print(letter, end='')
+        flag = False
