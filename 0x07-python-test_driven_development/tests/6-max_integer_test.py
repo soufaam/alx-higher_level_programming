@@ -1,6 +1,4 @@
 #!/bin/usr/python3
-import unittest
-max_integer = __import__('6-max_integer').max_integer
 
 """ This is a decription of this module .
 
@@ -13,74 +11,39 @@ with a section header and a colon followed
 by a block of indented text.
 """
 
-class TestMaxInteger(unittest.TestCase):
-    def test_max_integer_end(self):
-        """Class methods are similar to regular functions.
-        Note:
-            Do not include the `self` parameter in the ``Args`` section.
-        Returns:
-            returns 
-        """
-        
-        got = max_integer([1, 2, 4])
-        self.assertEqual(got, 4)
 
-    def test_max_integer_void(self):
-        """Class methods are similar to regular functions.
-        Note:
-            Do not include the `self` parameter in the ``Args`` section.
-        Returns:
-            returns 
-        """
-        got = max_integer([])
-        self.assertEqual(got, None)
+def matrix_mul(m_a, m_b):
+    """Class methods are similar to regular functions.
+    Note:
+        Do not include the `self` parameter in the ``Args`` section.
+    Returns:
+        returns 
+    """
+    m_c = []
+    value = 0
+    if not isinstance(m_a, list):
+        raise TypeError("m_a must be a list")
+    if m_a == [] or m_a == [[]]:
+        raise ValueError("m_a can't be empty")
+    if m_b == [] or m_b == [[]]:
+        raise ValueError("m_b can't be empty")
+    if not isinstance(m_b, list):
+        raise TypeError("m_b must be a list")
+    for i in range(len(m_a)):
+        value = 0
+        if not isinstance(m_a[i], list):
+            raise TypeError("m_a must be a list of lists")
+        for j in range(len(m_b)):
+            if not isinstance(m_b[i], list):
+                raise TypeError("m_b must be a list of lists")
+            if not isinstance(m_a[i][j], int) and isinstance(m_a[i][j], float):
+                raise TypeError("m_a should contain only integers or floats")
+            if not isinstance(m_b[j][i], int) and isinstance(m_b[j][i], float):
+                raise TypeError("m_b should contain only integers or floats")
+            if len(m_a[i]) < 1 and len(m_a[i]) != len(m_b[j]):
+                raise TypeError("each row of m_a must be of the same size")
+            if len(m_b[j]) < 1 and len(m_a[i]) != len(m_b[j]):
+                raise TypeError("each row of m_b must be of the same size")
+            value += m_a[i][j] * m_b[j][i]
+        m_c.append(value)
 
-    def test_max_negative(self):
-        """Class methods are similar to regular functions.
-        Note:
-            Do not include the `self` parameter in the ``Args`` section.
-        Returns:
-            returns 
-        """
-        got = max_integer([-1, -2, -5, -4])
-        self.assertEqual(got, -1)
-
-    def test_max_bigining(self):
-        """Class methods are similar to regular functions.
-        Note:
-            Do not include the `self` parameter in the ``Args`` section.
-        Returns:
-            returns 
-        """
-        got = max_integer([45, 2, 23, 4])
-        self.assertEqual(got, 45)
-
-    def test_max_midle(self):
-        """Class methods are similar to regular functions.
-        Note:
-            Do not include the `self` parameter in the ``Args`` section.
-        Returns:
-            returns 
-        """
-        got = max_integer([34, 2, 70, 4])
-        self.assertEqual(got, 70)
-
-    def test_max_mix(self):
-        """Class methods are similar to regular functions.
-        Note:
-            Do not include the `self` parameter in the ``Args`` section.
-        Returns:
-            returns 
-        """
-        got = max_integer([34, -2, 70, 4])
-        self.assertEqual(got, 70)
-
-    def test_max_one_element(self):
-        """Class methods are similar to regular functions.
-        Note:
-            Do not include the `self` parameter in the ``Args`` section.
-        Returns:
-            returns 
-        """
-        got = max_integer([34])
-        self.assertEqual(got, 34)
