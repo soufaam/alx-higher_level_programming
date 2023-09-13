@@ -43,7 +43,6 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-
     def area(self):
         """If the function contains notable behavior, it should be
         mentioned here.
