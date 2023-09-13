@@ -23,7 +23,7 @@ class BaseGeometry:
         """If the function contains notable behavior, it should be
     mentioned here.
     """
-        if not isinstance(value, int):
+        if "int" not in str(type(value)):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
