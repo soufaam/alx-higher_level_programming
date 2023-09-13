@@ -12,10 +12,15 @@ block of indented text.
 """
 
 
-def lookup(obj):
-    """lookup function: 
+class MyList(list):
+    """This is a class MyList summary, it's a empty
+    class that defines a MyList"""
+    def print_sorted(self):
+        """print_sorted function:
         value (int): set the _size to value.
-    If the function contains notable behavior, it should be
+    If the print_sorted contains notable behavior,
+    it should be
     mentioned here.
     """
-    return (dir(obj))
+        self.sort()
+        print(self)
