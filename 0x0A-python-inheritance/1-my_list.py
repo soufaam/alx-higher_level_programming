@@ -24,3 +24,4 @@ class MyList(list):
     """
         self.sort()
         print(self)
+        return self
