@@ -60,9 +60,21 @@ class Square(Rectangle):
     """This is a class BaseGeometry summary, it's a empty
     class that defines a BaseGeometry
     there is no attributes yet
+    Square that inherit from  a Rectangle
+    there is no attributes yet
     """
     def __init__(self, size):
         """If the function contains notable behavior, it should be
         mentioned here.
+        args:
+            size of rectangle
         """
         super().__init__(size, size)
+
+    def area(self):
+        """If the function contains notable behavior, it should be
+        mentioned here.
+        args:
+            size of rectangle
+        """
+        return super().area(self.__size, self.__size)
