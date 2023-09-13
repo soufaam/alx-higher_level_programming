@@ -13,11 +13,14 @@ block of indented text.
 
 
 def is_same_class(obj, a_class):
-    """is_same_class function: 
+    """is_same_class function:
     args:
         obj : is a object.
         a_class: class type
         If the function contains notable behavior, it should be
     mentioned here.
     """
-    return isinstance(obj, a_class)
+    if str(a_class) in str(type(obj)):
+        return True
+    else:
+        return False
