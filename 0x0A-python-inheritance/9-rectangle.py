@@ -55,7 +55,6 @@ class Rectangle(BaseGeometry):
         """
         return f"[Rectangle] {self.__width}/{self.__height}"
 
-
 class Square(Rectangle):
     """This is a class BaseGeometry summary, it's a empty
     class that defines a BaseGeometry
@@ -65,17 +64,4 @@ class Square(Rectangle):
         """If the function contains notable behavior, it should be
         mentioned here.
         """
-        self.integer_validator("size", size)
-        self.__size = size
-
-    def area(self):
-        """If the function contains notable behavior, it should be
-        mentioned here.
-        """
-        return self.__size * self.__size
-
-    def __str__(self) -> str:
-        """If the function contains notable behavior, it should be
-        mentioned here.
-        """
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        super().__init__(size, size)
