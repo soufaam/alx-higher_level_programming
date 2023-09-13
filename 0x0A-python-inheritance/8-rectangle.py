@@ -38,6 +38,10 @@ class Rectangle(BaseGeometry):
         """If the function contains notable behavior, it should be
         mentioned here.
         """
-        self.integer_validator(width, height)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
+
+r = Rectangle(3, "3")
+print(r.__height)
