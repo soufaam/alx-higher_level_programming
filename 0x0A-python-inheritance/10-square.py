@@ -80,6 +80,3 @@ class Square(Rectangle):
             size of rectangle
         """
         return super().area()
-
-s = Square(4)
-print(s.area())
