@@ -42,6 +42,3 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
-
-r = Rectangle(3, "3")
-print(r.__height)
