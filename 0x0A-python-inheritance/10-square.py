@@ -70,7 +70,8 @@ class Square(Rectangle):
             size of rectangle
         """
         self.integer_validator("size", size)
-        super().__init__(size, size)
+        self.__size = size
+        super().__init__(self.__size, self.__size)
 
     def area(self):
         """If the function contains notable behavior, it should be
@@ -78,4 +79,7 @@ class Square(Rectangle):
         args:
             size of rectangle
         """
-        return super().area(self.__size, self.__size)
+        return super().area()
+
+s = Square(4)
+print(s.area())
