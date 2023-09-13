@@ -56,7 +56,6 @@ class Rectangle(BaseGeometry):
         return f"[Rectangle] {self.__width}/{self.__height}"
 
 
-
 class Square(Rectangle):
     """This is a class BaseGeometry summary, it's a empty
     class that defines a BaseGeometry
@@ -70,6 +69,7 @@ class Square(Rectangle):
         args:
             size of rectangle
         """
+        self.integer_validator("size", size)
         super().__init__(size, size)
 
     def area(self):
