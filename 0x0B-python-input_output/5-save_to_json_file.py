@@ -13,5 +13,5 @@ def save_to_json_file(my_obj, filename):
     Args:
     save_to_json_file: jsonify a string"""
 
-    with open(filename, "w+") as f:
+    with open(filename, "w") as f:
         return dump(my_obj, f)
