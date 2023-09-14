@@ -52,7 +52,7 @@ class Student:
 
     def reload_from_json(self, json):
         """The to_json method may be documented in either the class level"""
-        json["last_name"] = self.last_name
-        json["first_name"] = self.first_name
-        json["age"] = self.age
-        return json
+        print(json)
+        self.last_name = json["last_name"]
+        self.first_name = json["first_name"]
+        self.age = json["age"]
