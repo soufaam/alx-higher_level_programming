@@ -27,6 +27,8 @@ class Student:
     def to_json(self, attrs=None):
         """The to_json method may be documented in either the class level"""
         data = {}
+        if attrs == []:
+            return data
         if isinstance(attrs, list):
             for item in attrs:
                 if isinstance(item, str):
