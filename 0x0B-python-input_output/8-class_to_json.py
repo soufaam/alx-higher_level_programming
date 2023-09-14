@@ -3,7 +3,6 @@
 this module contains save_to_json_file function that takes myobject
 as parameter
 """
-from json import dumps
 
 
 def class_to_json(obj):
