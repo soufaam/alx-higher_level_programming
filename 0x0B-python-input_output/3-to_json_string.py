@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 import json
 
-
-""" This is a decription of this module ."""
+""" This is a decription of this module .
+this module contains to_json_sring function that takes myobject
+as parameter
+"""
 
 
 def to_json_string(my_obj):
@@ -10,6 +12,6 @@ def to_json_string(my_obj):
     This function reads a text file (UTF8) and prints it to stdout:
     Prototype: def read_file(filename=""):
     Args:
-    filname: name of file"""
+    to_json_string: jsonify a string"""
 
     return json.dumps(my_obj)
