@@ -43,5 +43,6 @@ class Student:
                         return self.__dict__
                 else:
                     return self.__dict__
+            return data
         else:
             return self.__dict__
