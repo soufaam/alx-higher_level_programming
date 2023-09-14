@@ -13,6 +13,6 @@ def load_from_json_file(filename):
     Args:
     save_to_json_file: jsonify a string"""
 
-    with open(filename, "r+") as f:
+    with open(filename, "r") as f:
         lt = load(f)
     return lt
