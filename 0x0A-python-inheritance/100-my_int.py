@@ -16,7 +16,7 @@ class MyInt(int):
 
     def __ne__(self, __value: object) -> bool:
         "reverse implemetantion of not equal"
-        return  True
+        return True
 
     def __eq__(self, __value: object) -> bool:
         "reverse implemetantion of equal"
