@@ -13,4 +13,4 @@ def to_json_string(my_obj):
     Args:
     to_json_string: jsonify a string"""
 
-    return json.dumps(my_obj)
+    return dumps(my_obj)
