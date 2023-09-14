@@ -35,10 +35,10 @@ class Student:
                             data[item] = self.first_name
                     elif item == "last_name":
                         if item not in data.keys():
-                            data[item] = self.first_name
+                            data[item] = self.last_name
                     elif item == "age":
                         if item not in data.keys():
-                            data[item] = self.first_name
+                            data[item] = self.age
                     else:
                         return self.__dict__
                 else:
