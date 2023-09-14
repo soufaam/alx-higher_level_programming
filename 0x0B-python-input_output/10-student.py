@@ -30,7 +30,7 @@ class Student:
         if isinstance(attrs, list):
             for item in attrs:
                 if isinstance(item, str):
-                    if item == "firstname":
+                    if item == "first_name":
                         if item not in data.keys():
                             data[item] = self.first_name
                     elif item == "last_name":
