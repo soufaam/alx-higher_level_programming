@@ -24,7 +24,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attrs= None):
+    def to_json(self, attrs=None):
         """The to_json method may be documented in either the class level"""
         data = {}
         if isinstance(attrs, list):
@@ -39,10 +39,11 @@ class Student:
                     elif item == "age":
                         if item not in data.keys():
                             data[item] = self.age
-                    else:
-                        return self.__dict__
                 else:
                     return self.__dict__
-            return data
+            if data != {}:
+                return data
+            else:
+                return self.__dict__
         else:
             return self.__dict__
