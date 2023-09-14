@@ -9,6 +9,6 @@ def read_file(filename=""):
     Prototype: def read_file(filename=""):
     Args:
     filname: name of file"""
-    with open (filename) as f:
+    with open(filename) as f:
         stdout = f.read()
         print(stdout)
