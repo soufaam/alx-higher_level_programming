@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-import json
-
 """ This is a decription of this module .
 this module contains to_json_sring function that takes myobject
 as parameter
 """
+from json import dumps
 
 
 def to_json_string(my_obj):
