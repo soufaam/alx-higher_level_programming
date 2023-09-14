@@ -20,9 +20,9 @@ class Student:
         Args:
             param1 (str): Description of `param1`.
         """
-        first_name = first_name
-        last_name = last_name
-        age = age
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
     def to_json(self):
         """The to_json method may be documented in either the class level"""
