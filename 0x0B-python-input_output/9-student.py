@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+
+""" This is a decription of this module .
+
+This module demonstrates documentation as specified by the `Google Python
+Style Guide`_. Docstrings may extend over multiple lines. Sections are created
+with a section header and a colon followed by a block of indented text.
+"""
+from json import dumps
+
+
+class Student:
+    """This is a class Square summary, it's a empty class that defines a square
+    there is no attributes yet
+    """
+
+    def __init__(self, first_name, last_name, age):
+        """
+         The __init__ method may be documented in either the class level
+        docstring, or as a docstring on the __init__ method itself.
+        Args:
+            param1 (str): Description of `param1`.
+        """
+        first_name = first_name
+        last_name = last_name
+        age = age
+
+    def to_json(self):
+        """The to_json method may be documented in either the class level"""
+        return self.__dict__
