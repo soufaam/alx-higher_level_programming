@@ -16,7 +16,7 @@ def append_after(filename="", search_string="", new_string=""):
         lines = rfile.readlines()
         for index in range(len(lines)):
             if lines[index].find(search_string) != -1:
-                if index + 1 == len(lines):
+                if index == len(lines):
                     lines.append(new_string)
                 else:
                     lines.insert(index + 1, new_string)
