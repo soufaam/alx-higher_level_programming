@@ -12,13 +12,18 @@ def append_after(filename="", search_string="", new_string=""):
     Args:
     append_after: jsonify a string"""
 
+    lines = []
+    listindex = []
+    new_lines = []
     with open(filename, "r") as rfile:
         lines = rfile.readlines()
         for index in range(len(lines)):
             if lines[index].find(search_string) != -1:
-                if index == len(lines):
-                    lines.append(new_string)
-                else:
-                    lines.insert(index + 1, new_string)
+                listindex.append(index)
+    for iter in range(len(lines)):
+        new_lines.append(lines[iter])
+        for index in listindex:
+            if index == iter:
+                new_lines.append(new_string)
     with open(filename, "w") as wfile:
-        wfile.writelines(lines)
+        wfile.writelines(new_lines)
