@@ -20,10 +20,10 @@ def script_parser():
     while line != '':
         i += 1
         parsedline = line.split()
-        if "size" not in file_size.keys():
+        try:
             file_size["size"] = int(parsedline[-1])
-        else:
-            file_size["size"] += int(parsedline[-1])
+        except ValueError:
+            continue
         if int(parsedline[-2]) not in status_dict.keys():
             status_dict[int(parsedline[-2])] = 1
         else:
