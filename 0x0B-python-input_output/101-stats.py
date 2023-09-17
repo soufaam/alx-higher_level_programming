@@ -21,7 +21,7 @@ def script_parser():
         i += 1
         parsedline = line.split()
         try:
-            file_size["size"] = int(parsedline[-1])
+            file_size["size"] += int(parsedline[-1])
         except ValueError:
             pass
         if int(parsedline[-2]) not in status_dict.keys():
