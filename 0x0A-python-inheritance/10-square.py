@@ -7,7 +7,7 @@ with a section header and a colon followed by a block of indented text.
 BaseGeometry module contains BaseGeometry class implemetation
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
-Rectangle = __import__('9-Rectangle').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
