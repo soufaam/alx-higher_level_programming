@@ -8,6 +8,7 @@ BaseGeometry module contains BaseGeometry class implemetation
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """This is a class BaseGeometry summary, it's a empty
     class that defines a BaseGeometry
