@@ -23,6 +23,7 @@ def script_parser():
         try:
             file_size["size"] += int(parsedline[-1])
         except ValueError:
+            line = sys.stdin.readline()
             continue
         if int(parsedline[-2]) not in status_dict.keys():
             status_dict[int(parsedline[-2])] = 1
