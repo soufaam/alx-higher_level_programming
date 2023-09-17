@@ -12,8 +12,11 @@ def script_parser():
 
     status_dict = {}
     file_size = {}
+    file_size['size'] = 0
     i = 0
     line = sys.stdin.readline()
+    if line == '':
+        print(f"File size: {file_size['size']}")
     while line != '':
         i += 1
         parsedline = line.split()
@@ -27,12 +30,12 @@ def script_parser():
             status_dict[int(parsedline[-2])] += 1
         list_of_keys = list(status_dict.keys())
         list_of_keys.sort()
-        if i >= 10:
+        line = sys.stdin.readline()
+        if i >= 10 or line == '':
             print(f"File size: {file_size['size']}")
             if list_of_keys is not None:
                 for code in list_of_keys:
                     print(f"{code}: {status_dict[code]}")
-        line = sys.stdin.readline()
 
 
 if __name__ == "__main__":
