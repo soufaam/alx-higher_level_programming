@@ -22,13 +22,13 @@ def script_parser():
         parsedline = line.split()
         try:
             file_size["size"] += int(parsedline[-1])
+            if int(parsedline[-2]) not in status_dict.keys():
+                status_dict[int(parsedline[-2])] = 1
+            else:
+                status_dict[int(parsedline[-2])] += 1
         except ValueError:
             line = sys.stdin.readline()
             continue
-        if int(parsedline[-2]) not in status_dict.keys():
-            status_dict[int(parsedline[-2])] = 1
-        else:
-            status_dict[int(parsedline[-2])] += 1
         list_of_keys = list(status_dict.keys())
         list_of_keys.sort()
         line = sys.stdin.readline()
