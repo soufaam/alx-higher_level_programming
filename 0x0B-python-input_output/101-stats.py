@@ -14,7 +14,7 @@ def script_parser():
     file_size = {}
     i = 0
     line = sys.stdin.readline()
-    while line != -1:
+    while line != '':
         i += 1
         parsedline = line.split()
         if "size" not in file_size.keys():
