@@ -49,4 +49,5 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 >>> bg.area()
 Traceback (most recent call last):
         ...
-Execption: area() is not implemented
+Exception: area() is not implemented
+>>>
