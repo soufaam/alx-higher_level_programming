@@ -32,6 +32,7 @@ def script_parser():
         list_of_keys.sort()
         line = sys.stdin.readline()
         if i >= 10 or line == '':
+            i = 0
             print(f"File size: {file_size['size']}")
             if list_of_keys is not None:
                 for code in list_of_keys:
