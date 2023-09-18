@@ -21,3 +21,5 @@ def inherits_from(obj, a_class):
     mentioned here.
     """
     return isinstance(obj, a_class)
+a = [1, 2, 3]
+print(inherits_from(a, list))
