@@ -19,7 +19,8 @@ if __name__ == "__main__":
     try:
         r = Rectangle(10, 2, 2, 2)
         r.display()
-        
+        r.update(49, 12, 23, 34, 45)
+        print(r.id)
     except Exception as e:
         print("[{}] {}".format(e.__class__.__name__, e))
 
