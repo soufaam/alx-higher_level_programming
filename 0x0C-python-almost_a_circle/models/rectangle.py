@@ -129,7 +129,12 @@ class Rectangle(Base):
         string = ""
         if self.__height == 0 or self.__width == 0:
             print(string)
+        for inc in range(self.y):
+            string += '\n'
+        x = self.x
         for element in range(self.__height):
+            for pos in range(x):
+                string += ' '
             for item in range(self.__width):
                 string += f"#"
             if element == self.__height - 1:
@@ -141,3 +146,4 @@ class Rectangle(Base):
         """overriding the __str__ method"""
         return f"[Rectangle] ({self.id}) \
 {self.x}/{self.y} - {self.width}/{self.height}"
+
