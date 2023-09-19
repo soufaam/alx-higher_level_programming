@@ -156,6 +156,6 @@ class Rectangle(Base):
             if i >= len(attr):
                 break
             self.__setattr__(attr[i], args[i])
-        for i in range(len(kwargs)):
+        for i in range(len(attr)):
             if attr[i] in kwargs.keys():
                 self.__setattr__(attr[i], kwargs[attr[i]])
