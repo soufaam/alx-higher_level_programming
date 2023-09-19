@@ -146,4 +146,3 @@ class Rectangle(Base):
         """overriding the __str__ method"""
         return f"[Rectangle] ({self.id}) \
 {self.x}/{self.y} - {self.width}/{self.height}"
-
