@@ -136,3 +136,8 @@ class Rectangle(Base):
                 break
             string += '\n'
         print(string)
+
+    def __str__(self) -> str:
+        """overriding the __str__ method"""
+        return f"[Rectangle] ({self.id}) \
+{self.x}/{self.y} - {self.width}/{self.height}"
