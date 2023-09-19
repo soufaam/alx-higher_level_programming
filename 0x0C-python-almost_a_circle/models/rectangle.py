@@ -7,7 +7,8 @@ from models.base import Base
 
 class Rectangle(Base):
     """the class Rectangle inherited fronm Base class
-    Why private attributes with getter/setter? Why not directly public attribute?
+    Why private attributes with getter/setter? Why not
+    directly public attribute?
 
     Because we want to protect attributes of our class.
     With a setter, you are able to validate what a developer
@@ -49,7 +50,7 @@ class Rectangle(Base):
         """getter method for width"""
 
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """setter value assign value to width"""
@@ -57,16 +58,15 @@ class Rectangle(Base):
             raise TypeError(f"width must be an integer")
         if value <= 0:
             raise ValueError(f"width must be > 0")
-        
         self.__width = value
         return self.__width
 
     @property
     def height(self):
         """getter method for height"""
-        
+
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """setter value assign value to __height"""
@@ -76,13 +76,13 @@ class Rectangle(Base):
             raise ValueError(f"height must be > 0")
         self.__height = value
         return self.__height
-    
+
     @property
     def x(self):
         """getter method for x"""
-        
+
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """setter value assign value to __x"""
@@ -97,13 +97,13 @@ class Rectangle(Base):
     @property
     def y(self):
         """getter method for y"""
-        
+
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         """setter value assign value to __y"""
-        
+
         if not isinstance(value, int):
             raise TypeError(f"y must be an integer")
         if value < 0:
@@ -112,6 +112,7 @@ class Rectangle(Base):
         return self.__y
 
     def area(self):
-        """public method def area(self): that returns the area value of the Rectangle instance."""
+        """public method def area(self): that returns the
+        area value of the Rectangle instance."""
 
         return self.width * self.height
