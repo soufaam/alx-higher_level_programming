@@ -10,4 +10,3 @@ class TestBaseClass(unittest.TestCase):
         """return area"""
         r = Rectangle(10, 2, id=12)
         self.assertEqual(r.area(), 20)
-
