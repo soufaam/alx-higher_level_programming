@@ -116,3 +116,23 @@ class Rectangle(Base):
         area value of the Rectangle instance."""
 
         return self.width * self.height
+
+    def display(self):
+        """public method def area(self): that returns the
+        area value of the Rectangle instance."""
+        """instance method: this  instance method that prints
+        the square based on __size
+        no args are given we could access to the _ssize using self
+        If the setter method contains notable behavior, it should be
+        mentioned here.
+        """
+        string = ""
+        if self.__height == 0 or self.__width == 0:
+            print(string)
+        for element in range(self.__height):
+            for item in range(self.__width):
+                string += f"#"
+            if element == self.__height - 1:
+                break
+            string += '\n'
+        print(string)
