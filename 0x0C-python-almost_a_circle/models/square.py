@@ -63,3 +63,11 @@ class Square(Rectangle):
                     self.__setattr__("height", kwargs[attr[i]])
                     continue
                 self.__setattr__(attr[i], kwargs[attr[i]])
+
+    def to_dictionary(self):
+        """public method def to_dictionary(self):
+        that returns the dictionary representation of
+        a Rectangle:"""
+
+        return {"x": self.x, "y": self.y, "id": self.id,
+                "size": self.height}
