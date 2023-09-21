@@ -43,4 +43,4 @@ class Base:
                 json_file.write("[]")
             for item in list_objs:
                 json_obj.append(item.to_dictionary())
-            json_file.write(json.dumps(json_obj))
+            json_file.write(cls.to_json_string(json_obj))
