@@ -27,5 +27,5 @@ class Square(Rectangle):
 
     def __str__(self) -> str:
         """overriding the __str__ method"""
-        return f"[Square] ({self.id})\
+        return f"[Square] ({self.id}) \
 {self.x}/{self.y} - {self.width}/{self.height}"
