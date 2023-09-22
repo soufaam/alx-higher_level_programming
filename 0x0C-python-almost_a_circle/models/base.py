@@ -62,5 +62,5 @@ class Base:
         attributes already set:"""
 
         dummy = cls(24, 12)
-        dummy.update(dictionary)
+        dummy.update(**dictionary)
         return dummy

@@ -150,12 +150,15 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """A public method def update(self, *args):
         that assigns an argument to each attribute:"""
-
+        flag = False
         attr = ["id", "width", "height", "x", "y",]
         for i in range(len(args)):
             if i >= len(attr):
                 break
             self.__setattr__(attr[i], args[i])
+            flag = True
+        if flag:
+            return
         for i in range(len(attr)):
             if attr[i] in kwargs.keys():
                 self.__setattr__(attr[i], kwargs[attr[i]])

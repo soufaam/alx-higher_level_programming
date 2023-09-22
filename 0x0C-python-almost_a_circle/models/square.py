@@ -48,6 +48,7 @@ class Square(Rectangle):
         that assigns an argument to each attribute:"""
 
         attr = ["id", "size", "x", "y",]
+        flag = False
         for i in range(len(args)):
             if i >= len(attr):
                 break
@@ -56,6 +57,9 @@ class Square(Rectangle):
                 self.__setattr__("height", args[i])
                 continue
             self.__setattr__(attr[i], args[i])
+            flag = True
+        if flag:
+            return
         for i in range(len(attr)):
             if attr[i] in kwargs.keys():
                 if attr[i] == "size":
