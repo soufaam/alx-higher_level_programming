@@ -131,4 +131,5 @@ class Base:
     def draw(list_rectangles, list_squares):
         """static method def draw(list_rectangles, list_squares): """
 
-        
+        pass
+
