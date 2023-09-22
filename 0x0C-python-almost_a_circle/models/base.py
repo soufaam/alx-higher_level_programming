@@ -3,6 +3,7 @@
 """this the model base containing the class Base"""
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -130,4 +131,25 @@ class Base:
     def draw(list_rectangles, list_squares):
         """static method def draw(list_rectangles, list_squares): """
 
-        pass
+        screen = turtle.Screen()
+        for rec in list_rectangles:
+            rectangle = turtle.Turtle()
+            rectangle.penup()
+            rectangle.goto(rec.x, rec.y)
+            rectangle.pendown()
+            for i in range(2):
+                rectangle.forward(rec.width)
+                rectangle.right(90)
+                rectangle.forward(rec.height)
+                rectangle.right(90)
+        for seq in list_squares:
+            square = turtle.Turtle()
+            square.penup()
+            square.goto(seq.x, seq.y)
+            square.pendown()
+            for i in range(2):
+                square.forward(seq.width)
+                square.right(90)
+                square.forward(seq.width)
+                square.right(90)
+        screen.delay(45)
