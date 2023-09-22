@@ -69,7 +69,7 @@ class TestRectangleClass(unittest.TestCase):
 
     def test_str__(self):
         """get set y attribute"""
-        r = Rectangle(10, 2, 12, 13, id = 10)
+        r = Rectangle(10, 2, 12, 13, id=10)
         st = r.__str__()
         self.assertEqual("[Rectangle] (10) 12/13 - 10/2", st)
 
