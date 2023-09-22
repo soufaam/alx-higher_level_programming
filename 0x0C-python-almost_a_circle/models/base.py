@@ -41,6 +41,7 @@ class Base:
         with open(f"{cls.__name__}.json", "w") as json_file:
             if list_objs is None:
                 json_file.write("[]")
+                return
             for item in list_objs:
                 json_obj.append(item.to_dictionary())
             json_file.write(cls.to_json_string(json_obj))
