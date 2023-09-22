@@ -2,7 +2,7 @@
 
 """this the model base containing the class Base"""
 import json
-
+import csv
 
 class Base:
     """the class base
@@ -80,3 +80,47 @@ class Base:
             return lista
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """class method def load_from_file(cls):"""
+
+        lista = []
+        dic = {}
+        try:
+            with open(f"{cls.__name__}.csv", "r") as csv_file:
+                data = csv.reader(csv_file, delimiter=',')
+                fieldname = next(data)
+                for datem in data:
+                    for i in range(len(datem)):
+                        dic[fieldname[i]] = int(datem[i])
+                    objec = cls.create(**dic) 
+                    lista.append(objec)
+            return lista
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """class methods def save_to_file_csv(cls, list_objs):
+        and def load_from_file_csv(cls):
+        that serializes and deserializes in CSV:"""
+
+        csv_obj = []
+        lt = []
+        with open(f"{cls.__name__}.csv", "w") as csv_file:
+            csvwrite = csv.writer(csv_file)
+            if cls.__name__ == "Rectangle":
+                fields = ["id", "width", "height", "x", "y"]
+            elif  cls.__name__ == "Square":
+                fields = ["id", "size", "x", "y"]
+            csv_obj.append(fields)
+            for item in list_objs:
+                lt = []
+                for key in fields:
+                    lt.append(item.to_dictionary()[key])
+                csv_obj.append(lt)
+            if list_objs is None:
+                csvwrite.writerow([])
+                return
+            csvwrite.writerows(csv_obj)
