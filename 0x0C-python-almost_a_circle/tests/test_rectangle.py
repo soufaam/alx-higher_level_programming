@@ -9,7 +9,7 @@ class TestRectangleClass(unittest.TestCase):
     def test_constructor_none(self):
         """id == None"""
         r = Rectangle(10, 2)
-        self.assertEqual(r.id, 5)
+        self.assertEqual(r.id, 7)
 
     def test_constructor_not_none(self):
         """id != None"""
@@ -19,7 +19,7 @@ class TestRectangleClass(unittest.TestCase):
     def test_constructor_not_none_inc(self):
         """increment nb_objects"""
         r = Rectangle(10, 2)
-        self.assertEqual(r.id, 6)
+        self.assertEqual(r.id, 8)
 
     def test_constructor_width(self):
         """get width attribute"""

@@ -26,14 +26,14 @@ class TestBaseClass(unittest.TestCase):
 
         b1 = Base()
         rt = b1.to_json_string(None)
-        self.assertEqual(rt, [])
+        self.assertEqual(rt, '[]')
 
     def test_to_json_empty(self):
         """Test of Base.to_json_string(None) exists"""
 
         b1 = Base()
         rt = b1.to_json_string([])
-        self.assertEqual(rt, [])
+        self.assertEqual(rt, '[]')
 
     def test_to_json_string_return_val(self):
         """Test of Base.to_json_string(None) exists"""
@@ -75,4 +75,3 @@ class TestBaseClass(unittest.TestCase):
 
         df = Base.from_json_string('[{"id": 89}]')
         self.assertEqual([{"id": 89}], df)
-

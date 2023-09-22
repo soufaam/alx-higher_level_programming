@@ -3,7 +3,6 @@
 """this the model base containing the class Base"""
 import json
 import csv
-import turtle
 
 
 class Base:
@@ -132,4 +131,3 @@ class Base:
         """static method def draw(list_rectangles, list_squares): """
 
         pass
-
