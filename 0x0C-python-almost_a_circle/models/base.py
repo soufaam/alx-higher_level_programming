@@ -4,6 +4,7 @@
 import json
 import csv
 
+
 class Base:
     """the class base
     This class will be the “base” of all other classes in this project.
@@ -94,7 +95,7 @@ class Base:
                 for datem in data:
                     for i in range(len(datem)):
                         dic[fieldname[i]] = int(datem[i])
-                    objec = cls.create(**dic) 
+                    objec = cls.create(**dic)
                     lista.append(objec)
             return lista
         except FileNotFoundError:
@@ -112,7 +113,7 @@ class Base:
             csvwrite = csv.writer(csv_file)
             if cls.__name__ == "Rectangle":
                 fields = ["id", "width", "height", "x", "y"]
-            elif  cls.__name__ == "Square":
+            elif cls.__name__ == "Square":
                 fields = ["id", "size", "x", "y"]
             csv_obj.append(fields)
             for item in list_objs:
