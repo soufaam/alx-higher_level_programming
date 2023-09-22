@@ -64,3 +64,19 @@ class Base:
         dummy = cls(24, 12)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """class method def load_from_file(cls):"""
+
+        lista = []
+        try:
+            with open(f"{cls.__name__}.json", "r") as json_file:
+                data = json_file.read()
+                data_string = cls.from_json_string(data)
+                for datem in data_string:
+                    objec = cls.create(**datem)
+                    lista.append(objec)
+            return lista
+        except FileNotFoundError:
+            return []
