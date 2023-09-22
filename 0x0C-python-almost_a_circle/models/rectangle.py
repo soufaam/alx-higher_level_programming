@@ -141,6 +141,7 @@ class Rectangle(Base):
                 break
             string += '\n'
         print(string)
+        return string
 
     def __str__(self) -> str:
         """overriding the __str__ method"""
