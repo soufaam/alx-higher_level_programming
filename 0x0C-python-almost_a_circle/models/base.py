@@ -3,6 +3,7 @@
 """this the model base containing the class Base"""
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -125,3 +126,9 @@ class Base:
                 csvwrite.writerow([])
                 return
             csvwrite.writerows(csv_obj)
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """static method def draw(list_rectangles, list_squares): """
+
+        

@@ -4,7 +4,7 @@ from models.rectangle import Rectangle
 """unitest model for base class"""
 
 
-class TestBaseClass(unittest.TestCase):
+class TestRectangleClass(unittest.TestCase):
 
     def test_constructor_none(self):
         """id == None"""
