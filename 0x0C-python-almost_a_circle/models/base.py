@@ -40,7 +40,7 @@ class Base:
         json_obj = []
         with open(f"{cls.__name__}.json", "w") as json_file:
             if list_objs is None:
-                json_file.write("[]")
+                json_file.write(cls.to_json_string(list_objs))
                 return
             for item in list_objs:
                 json_obj.append(item.to_dictionary())
