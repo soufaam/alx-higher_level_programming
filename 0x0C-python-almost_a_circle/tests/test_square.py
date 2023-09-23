@@ -95,7 +95,7 @@ class TestRectangleClass(unittest.TestCase):
         self.assertEqual({"size": 98,
                           "x": 100, 'y': 0, "id": 89}, st)
 
-    def test_update_val_create(self):
+    def test_update_val_create1(self):
         """get set y attribute"""
         r = Square.create(**{'id': 89, 'size': 1,
                              'x': 2, 'y': 3})
