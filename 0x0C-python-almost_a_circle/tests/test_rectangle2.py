@@ -66,3 +66,10 @@ class TestBaseClass(unittest.TestCase):
 
         with self.assertRaises(Exception):
             r = Rectangle()
+
+    def test_update_val_create(self):
+        """get set y attribute"""
+        with self.assertRaises(ValueError) as context:
+            r = Rectangle(1, 0)
+
+        self.assertTrue("height must be > 0" in str(context.exception))

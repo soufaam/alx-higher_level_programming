@@ -175,3 +175,8 @@ class TestRectangleClass(unittest.TestCase):
         st = r.to_dictionary()
         self.assertEqual({'id': 89, 'width': 1,
                           'height': 53, 'x': 2, 'y': 3}, st)
+
+    def test_update_val_saveto(self):
+        """get set y attribute"""
+        Rectangle.save_to_file([])
+        self.assertEqual(Rectangle.load_from_file(), [])
