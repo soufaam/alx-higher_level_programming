@@ -63,7 +63,7 @@ class Base:
         that returns an instance with all
         attributes already set:"""
 
-        dummy = cls(24, 12)
+        dummy = cls(24)
         dummy.update(**dictionary)
         return dummy
 
