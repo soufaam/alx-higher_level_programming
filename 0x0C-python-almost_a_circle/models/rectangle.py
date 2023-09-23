@@ -152,7 +152,7 @@ class Rectangle(Base):
         """A public method def update(self, *args):
         that assigns an argument to each attribute:"""
         flag = False
-        attr = ["id", "width", "height", "x", "y",]
+        attr = ["id", "width", "height", "x", "y"]
         for i in range(len(args)):
             if i >= len(attr):
                 break

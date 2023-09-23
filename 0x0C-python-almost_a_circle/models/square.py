@@ -47,7 +47,7 @@ class Square(Rectangle):
         """A public method def update(self, *args):
         that assigns an argument to each attribute:"""
 
-        attr = ["id", "size", "x", "y",]
+        attr = ["id", "size", "x", "y"]
         flag = False
         for i in range(len(args)):
             if i >= len(attr):
