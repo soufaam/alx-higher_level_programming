@@ -78,3 +78,91 @@ class TestRectangleClass(unittest.TestCase):
         r = Rectangle(10, 2)
         st = r.display()
         self.assertEqual("##########\n##########", st)
+
+    def test_to_dict(self):
+        """get set y attribute"""
+        r = Rectangle(10, 2, id=12)
+        st = r.to_dictionary()
+        self.assertEqual({"width": 10, "height": 2,
+                          "x": 0, "y": 0, "id": 12}, st)
+
+    def test_update(self):
+        """get set y attribute"""
+        r = Rectangle(10, 2, id=12)
+        r.update()
+        st = r.to_dictionary()
+        self.assertEqual({"width": 10, "height": 2,
+                          "x": 0, "y": 0, "id": 12}, st)
+
+    def test_update_val(self):
+        """get set y attribute"""
+        r = Rectangle(10, 2, id=12)
+        r.update(89)
+        st = r.to_dictionary()
+        self.assertEqual({"width": 10, "height": 2,
+                          "x": 0, "y": 0, "id": 89}, st)
+
+    def test_update_val_w(self):
+        """get set y attribute"""
+        r = Rectangle(10, 2, id=12)
+        r.update(89, 1)
+        st = r.to_dictionary()
+        self.assertEqual({"width": 1, "height": 2,
+                          "x": 0, "y": 0, "id": 89}, st)
+
+    def test_update_val_h(self):
+        """get set y attribute"""
+        r = Rectangle(10, 2, id=12)
+        r.update(89, 1, 12)
+        st = r.to_dictionary()
+        self.assertEqual({"width": 1, "height": 12,
+                          "x": 0, "y": 0, "id": 89}, st)
+
+    def test_update_val_x(self):
+        """get set y attribute"""
+        r = Rectangle(10, 2, id=2)
+        r.update(89, 1, 12, 98)
+        st = r.to_dictionary()
+        self.assertEqual({"width": 1, "height": 12,
+                          "x": 98, "y": 0, "id": 89}, st)
+
+    def test_update_val_y(self):
+        """get set y attribute"""
+        r = Rectangle(10, 2, id=12)
+        r.update(89, 1, 12, 98, 100)
+        st = r.to_dictionary()
+        self.assertEqual({"width": 1, "height": 12,
+                          "x": 98, "y": 100, "id": 89}, st)
+
+    def test_update_val_dict(self):
+        """get set y attribute"""
+        r = Rectangle(10, 2, id=12)
+        r.update(**{'id': 89, 'width': 1})
+        st = r.to_dictionary()
+        self.assertEqual({"width": 1, "height": 2,
+                          "x": 0, "y": 0, "id": 89}, st)
+
+    def test_update_val_dict1(self):
+        """get set y attribute"""
+        r = Rectangle(10, 2, id=12)
+        r.update(**{'id': 89, 'width': 1, 'height': 12})
+        st = r.to_dictionary()
+        self.assertEqual({"width": 1, "height": 12,
+                          "x": 0, "y": 0, "id": 89}, st)
+
+    def test_update_val_dict2(self):
+        """get set y attribute"""
+        r = Rectangle(10, 2, id=12)
+        r.update(**{'id': 89, 'width': 1,
+                    'height': 12, 'x': 3})
+        st = r.to_dictionary()
+        self.assertEqual({"width": 1, "height": 12,
+                          "x": 3, "y": 0, "id": 89}, st)
+
+    def test_update_val_dict2(self):
+        """get set y attribute"""
+        r = Rectangle(10, 2, id=12)
+        r.update(**{'id': 89, 'width': 1, 'height': 12, 'x': 3, 'y': 4})
+        st = r.to_dictionary()
+        self.assertEqual({"width": 1, "height": 12,
+                          "x": 3, "y": 4, "id": 89}, st)
