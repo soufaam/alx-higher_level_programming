@@ -94,3 +94,11 @@ class TestRectangleClass(unittest.TestCase):
         st = r.to_dictionary()
         self.assertEqual({"size": 98,
                           "x": 100, 'y': 0, "id": 89}, st)
+
+    def test_update_val_create(self):
+        """get set y attribute"""
+        r = Square.create(**{'id': 89, 'size': 1,
+                             'x': 2, 'y': 3})
+        st = r.to_dictionary()
+        self.assertEqual({'id': 89, 'size': 1,
+                          'x': 2, 'y': 3}, st)

@@ -162,7 +162,16 @@ class TestRectangleClass(unittest.TestCase):
     def test_update_val_dict3(self):
         """get set y attribute"""
         r = Rectangle(10, 2, id=12)
-        r.update(**{'id': 89, 'width': 1, 'height': 12, 'x': 3, 'y': 4})
+        r.update(**{'id': 89, 'width': 1,
+                    'height': 12, 'x': 3, 'y': 4})
         st = r.to_dictionary()
         self.assertEqual({"width": 1, "height": 12,
                           "x": 3, "y": 4, "id": 89}, st)
+
+    def test_update_val_create(self):
+        """get set y attribute"""
+        r = Rectangle.create(**{'id': 89, 'width': 1,
+                                'height': 53, 'x': 2, 'y': 3})
+        st = r.to_dictionary()
+        self.assertEqual({'id': 89, 'width': 1,
+                          'height': 53, 'x': 2, 'y': 3}, st)
