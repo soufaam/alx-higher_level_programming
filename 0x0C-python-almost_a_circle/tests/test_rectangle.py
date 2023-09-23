@@ -159,7 +159,7 @@ class TestRectangleClass(unittest.TestCase):
         self.assertEqual({"width": 1, "height": 12,
                           "x": 3, "y": 0, "id": 89}, st)
 
-    def test_update_val_dict2(self):
+    def test_update_val_dict3(self):
         """get set y attribute"""
         r = Rectangle(10, 2, id=12)
         r.update(**{'id': 89, 'width': 1, 'height': 12, 'x': 3, 'y': 4})
