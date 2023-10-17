@@ -71,5 +71,4 @@ class TestBaseClass(unittest.TestCase):
         """get set y attribute"""
         with self.assertRaises(ValueError) as context:
             r = Rectangle(1, 0)
-
         self.assertTrue("height must be > 0" in str(context.exception))
