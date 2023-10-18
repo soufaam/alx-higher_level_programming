@@ -1,0 +1,11 @@
+Here
+c is fun
+Python is cool!
+School
+c is fun
+Python is cool!
+c is fun
+Python is cool!
+We are Holberton
+c is fun
+Python is cool!
