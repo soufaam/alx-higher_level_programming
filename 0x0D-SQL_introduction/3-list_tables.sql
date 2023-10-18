@@ -1,7 +1,6 @@
 -- script database mysql
 -- Set a placeholder ofthe argument MySQL server.
-SET @arg1 = ?;
 -- Connect to DB
-USE @arg1;
+USE ;
 -- List TAbles
 SHOW TABLE;
