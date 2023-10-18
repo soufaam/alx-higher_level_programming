@@ -1,3 +1,3 @@
 -- script database mysql
 -- Set a placeholder ofthe argument MySQL server.
-SELECT COUNT(*) FROM first_table WHERE id = 89;
+SELECT COUNT(id) FROM first_table;
