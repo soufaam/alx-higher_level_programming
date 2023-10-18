@@ -1,3 +1,4 @@
 -- script database mysql
 -- Set a placeholder ofthe argument MySQL server.
-SELECT score, name FROM second_table ORDER BY score DESC; 
+SELECT score, COUNT(score) AS number FROM second_table
+GROUP BY score; 
