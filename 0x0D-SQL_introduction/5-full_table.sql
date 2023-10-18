@@ -1,3 +1,4 @@
 -- script database mysql
 -- List TAbles
-DESCRIBE first_table;
+SELECT COLUMN_NAME, DATA_TYPE, COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE
+ TABLE_NAME = 'first_table';
