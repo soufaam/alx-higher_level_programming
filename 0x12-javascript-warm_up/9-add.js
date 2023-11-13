@@ -1,14 +1,8 @@
 #!/usr/bin/node
-function facto (num) {
-  if (num === 0) {
-    return 1;
-  }
-  return num * facto(num - 1);
-}
-const number = parseInt(process.argv[2]);
-if (isNaN(number)) {
-  console.log(1);
+const number1 = parseInt(process.argv[2]);
+const number2 = parseInt(process.argv[3]);
+if (isNaN(number1) || isNaN(number2)) {
+  console.log('NaN');
 } else {
-  const f = facto(number);
-  console.log(f);
+  console.log(number1 + number2);
 }
