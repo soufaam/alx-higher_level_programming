@@ -6,12 +6,13 @@ if (argv.length === 2) {
   console.log(0);
 } else {
   let big = parseInt(argv[2]);
-
+  let secbig = big;
   for (let j = 2; j < argv.length; j++) {
     const num = parseInt(argv[j]);
     if (big < num) {
+      secbig = big;
       big = num;
     }
   }
-  console.log(big);
+  console.log(secbig);
 }
