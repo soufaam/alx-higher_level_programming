@@ -6,7 +6,7 @@ if (argv.length === 2) {
   console.log(0);
 } else {
   let big = parseInt(argv[2]);
-  let secbig = big;
+  let secbig = parseInt(argv[3]);
   for (let j = 2; j < argv.length; j++) {
     const num = parseInt(argv[j]);
     if (big < num) {
