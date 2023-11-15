@@ -4,5 +4,5 @@ class NumberOfCall {
 }
 
 exports.logMe = function (item) {
-  console.log(NumberOfCall.numberOfCall++, ':', item);
+  console.log(NumberOfCall.numberOfCall++ + ':', item);
 };
