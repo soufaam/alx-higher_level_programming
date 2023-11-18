@@ -16,3 +16,4 @@ ORDER BY states.id ASC;".format(sys.argv[4])
     for row in cur.fetchall():
         print(row)
     cur.close()
+    db.close()
