@@ -13,7 +13,7 @@ if __name__ == "__main__":
     param = sys.argv[4]
     command_sql = "SELECT * FROM states WHERE states.name = %(param)s \
 ORDER BY states.id ASC;"
-    result = cur.execute(command_sql, {'param':param})
+    result = cur.execute(command_sql, {'param': param})
     for row in cur.fetchall():
         print(row)
     cur.close()
