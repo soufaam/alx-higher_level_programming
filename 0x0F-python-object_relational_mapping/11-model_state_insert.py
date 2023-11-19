@@ -15,7 +15,7 @@ if __name__ == "__main__":
     factory = sessionmaker(bind=engine)
     session = factory()
     param = "Louisiana"
-    state = State(name = param)
+    state = State(name=param)
     session.add(state)
     session.commit()
     results = session.query(State).filter(State.name == param).all()
