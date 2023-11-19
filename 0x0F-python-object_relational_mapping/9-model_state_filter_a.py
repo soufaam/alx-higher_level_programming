@@ -5,7 +5,7 @@ from the database
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 
 if __name__ == "__main__":
     """The entry point where the script will executed"""
@@ -14,8 +14,6 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     factory = sessionmaker(bind=engine)
     session = factory()
-    result = session.query(State).first()
-    if result:
+    results = session.query(State).filter(State.name.contains('a')).all()
+    for result in results:
         print("{}: {}".format(result.id, result.name))
-    else:
-        print("Nothing")
