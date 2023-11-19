@@ -16,9 +16,8 @@ if __name__ == "__main__":
     session = factory()
     idx = 1
     flag = False
-    for instance in session.query(State).filter_by(id=122):
-        flag = True
-        print("{}: {}".format(idx, instance.name))
-        idx += 1
-    if not flag:
+    result = session.query(State).first()
+    if result:
+        print("{}: {}".format(result.id, result.name))
+    else:
         print("Nothing")

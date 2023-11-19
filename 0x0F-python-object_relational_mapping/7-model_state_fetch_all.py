@@ -12,7 +12,5 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     factory = sessionmaker(bind=engine)
     session = factory()
-    idx = 1
     for instance in session.query(State):
-        print("{}: {}".format(idx, instance.name))
-        idx += 1
+        print("{}: {}".format(instance.id, instance.name))
