@@ -9,7 +9,7 @@ from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":
     """The entry point where the script will executed"""
-    engine = create_engine('mysql+mysqldb://{}:{}@127.0.0.1:13306/{}'
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
     factory = sessionmaker(bind=engine)
