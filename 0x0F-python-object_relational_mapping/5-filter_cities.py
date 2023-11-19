@@ -22,6 +22,8 @@ if __name__ == "__main__":
         if rows[idx] != rows[length_rows - 1]:
             print(rows[idx][0], end=', ')
         else:
-            print(rows[idx][0])
+            continue
+            print(rows[idx][0], end= '')
+    print()
     cur.close()
     db.close()
