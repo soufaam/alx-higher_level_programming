@@ -13,5 +13,7 @@ if __name__ == "__main__":
     factory = sessionmaker(bind=engine)
     session = factory()
     results = session.query(State).order_by(State.id)
+    idx = 0
     for instance in session.query(State):
-        print("{}: {}".format(instance.id, instance.name))
+        idx += 1
+        print("{}: {}".format(idx, instance.name))
