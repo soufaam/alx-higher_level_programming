@@ -1,3 +1,3 @@
 #!/bin/bash
 #cURL body size
-curl -s -w "%{size_download}\n"  -o /dev/null $1
+curl -s -w "%{size_download}"  -o /dev/null $1
