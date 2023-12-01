@@ -10,4 +10,5 @@ import sys
 if __name__ == "__main__":
     resulta = requests.get(sys.argv[1])
     headers = resulta.headers
-    print(headers['X-Request-Id'])
+    if 'X-Request-Id' in headers.keys():
+        print(headers['X-Request-Id'])
