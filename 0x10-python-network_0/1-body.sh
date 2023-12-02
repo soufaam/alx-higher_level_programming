@@ -1,3 +1,4 @@
 #!/bin/bash
 #Display only body of a 200 status code response
-if [ "$(curl -LI "$1 "-o /dev/null -w '%{http_code}' -s)" == 200]; then curl -s "$1"; fi
+res=$(curl -s -LI "$1" -o /dev/null -w '%{http_code}')
+if [ "$res" == "200" ]; then curl -s "$1"; fi
