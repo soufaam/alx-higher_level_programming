@@ -2,7 +2,7 @@
 const fs = require('fs');
 try {
   const contents = fs.readFileSync(process.argv[2], 'utf8');
-  console.log(contents, '\n');
+  console.log(contents);
 } catch (error) {
   console.error({
     Error: error.message,
